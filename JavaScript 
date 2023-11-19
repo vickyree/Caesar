@@ -1,0 +1,28 @@
+function startTimer() {
+    // Get the input value (start time)
+    const startTimeInput = document.getElementById('start-time').value;
+    
+    // Convert the input string to a Date object
+    const startTime = new Date(startTimeInput);
+
+    // Update the timer every second
+    setInterval(updateTimer, 1000, startTime);
+}
+
+function updateTimer(startTime) {
+    // Get the current time
+    const currentTime = new Date();
+
+    // Calculate the elapsed time in milliseconds
+    const elapsedTime = currentTime - startTime;
+
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((elapsedTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+
+    // Display the elapsed time
+    const timerElement = document.getElementById('timer');
+    timerElement.innerHTML = `Elapsed Time: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+}
