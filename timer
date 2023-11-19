@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Timer</title>
+
+</head>
+
+<body>
+
+    <div class="timer-container">
+
+        <label for="start-time">Enter Start Time:</label>
+
+        <input type="datetime-local" id="start-time" required>
+
+        <button onclick="startTimer()">Start Timer</button>
+       <div id="timer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+    <div id="timer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
